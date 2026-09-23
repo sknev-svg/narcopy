@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NARCOPY - Entrar</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<!-- data-pagina="login" avisa o app.js que esta é a tela de login -->
+<body data-pagina="login">
+
+  <div class="tela-central">
+    <div class="caixa-login">
+      <div class="logo-narcopy">NARCOPY</div>
+      <div class="subtitulo">Sua central pessoal digital</div>
+
+      <!-- O formulário chama a função entrar() do app.js ao ser enviado -->
+      <form id="formLogin">
+        <div class="campo">
+          <label for="campoUsuarioLogin">Usuário</label>
+          <input type="text" id="campoUsuarioLogin" autocomplete="username" required>
+        </div>
+
+        <div class="campo">
+          <label for="campoSenhaLogin">Senha</label>
+          <input type="password" id="campoSenhaLogin" autocomplete="current-password" required>
+        </div>
+
+        <button type="submit" class="btn">Entrar</button>
+
+        <div id="mensagemLogin" class="mensagem"></div>
+      </form>
+
+      <div class="link-embaixo">
+        Ainda não tem uma conta? <a href="cadastro.html">Criar acesso</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- app.js precisa ser carregado no final do body para os elementos já existirem -->
+  <script src="js/app.js"></script>
+</body>
+</html>

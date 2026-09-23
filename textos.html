@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NARCOPY - Textos</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body data-pagina="textos">
+
+  <header class="cabecalho">
+    <div class="logo-narcopy">NARCOPY</div>
+    <div class="cabecalho-acoes">
+      <a class="btn-voltar" href="inicio.html">← Voltar</a>
+      <button class="btn-sair" onclick="sair()">Sair</button>
+    </div>
+  </header>
+
+  <main class="conteudo">
+    <div class="boas-vindas">
+      <h1>📝 Textos</h1>
+      <p>Suas anotações são salvas localmente neste navegador (localStorage).</p>
+    </div>
+
+    <div class="painel-form">
+      <h2>Nova anotação</h2>
+      <!-- O formulário chama salvarTexto() do app.js -->
+      <form id="formTexto">
+        <div class="campo">
+          <label for="campoTituloTexto">Título</label>
+          <input type="text" id="campoTituloTexto" placeholder="Ex: Ideia de projeto" required>
+        </div>
+
+        <div class="campo">
+          <label for="campoConteudoTexto">Conteúdo</label>
+          <textarea id="campoConteudoTexto" rows="5" placeholder="Escreva aqui sua anotação..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn">Salvar texto</button>
+
+        <div id="mensagemTexto" class="mensagem"></div>
+      </form>
+    </div>
+
+    <!-- Aqui o app.js insere os textos salvos, via mostrarTextos() -->
+    <div id="galeriaTextos" class="galeria">
+      <p class="vazio">Carregando...</p>
+    </div>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

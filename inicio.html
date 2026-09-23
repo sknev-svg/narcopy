@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NARCOPY - Início</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<!-- data-pagina="inicio" faz o app.js chamar verificarLogin() nesta página -->
+<body data-pagina="inicio">
+
+  <header class="cabecalho">
+    <div class="logo-narcopy">NARCOPY</div>
+    <div class="cabecalho-acoes">
+      <span id="nomeUsuarioLogado" style="color: var(--cor-texto-suave); font-size: 14px;"></span>
+      <button class="btn-sair" onclick="sair()">Sair</button>
+    </div>
+  </header>
+
+  <main class="conteudo">
+    <div class="boas-vindas">
+      <h1>Bem-vindo(a) à sua central</h1>
+      <p>Escolha abaixo o que deseja acessar.</p>
+    </div>
+
+    <div class="grade-dashboard">
+      <a class="card-dashboard" href="fotos.html">
+        <div class="icone">📷</div>
+        <div class="titulo">Fotos</div>
+      </a>
+
+      <a class="card-dashboard" href="textos.html">
+        <div class="icone">📝</div>
+        <div class="titulo">Textos</div>
+      </a>
+
+      <a class="card-dashboard" href="links.html">
+        <div class="icone">🔗</div>
+        <div class="titulo">Links</div>
+      </a>
+
+      <a class="card-dashboard" href="arquivos.html">
+        <div class="icone">📁</div>
+        <div class="titulo">Arquivos</div>
+      </a>
+    </div>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

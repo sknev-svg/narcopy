@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NARCOPY - Fotos</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body data-pagina="fotos">
+
+  <header class="cabecalho">
+    <div class="logo-narcopy">NARCOPY</div>
+    <div class="cabecalho-acoes">
+      <a class="btn-voltar" href="inicio.html">← Voltar</a>
+      <button class="btn-sair" onclick="sair()">Sair</button>
+    </div>
+  </header>
+
+  <main class="conteudo">
+    <div class="boas-vindas">
+      <h1>📷 Fotos</h1>
+      <p>Suas fotos são salvas localmente neste navegador (IndexedDB).</p>
+    </div>
+
+    <div class="painel-form">
+      <h2>Adicionar nova foto</h2>
+      <!-- O formulário chama salvarFoto() do app.js -->
+      <form id="formFoto">
+        <div class="campo">
+          <label for="campoArquivoFoto">Selecionar foto</label>
+          <input type="file" id="campoArquivoFoto" accept="image/*" required>
+        </div>
+
+        <div class="campo">
+          <label for="campoTituloFoto">Título</label>
+          <input type="text" id="campoTituloFoto" placeholder="Ex: Viagem à praia" required>
+        </div>
+
+        <button type="submit" class="btn">Salvar foto</button>
+
+        <div id="mensagemFoto" class="mensagem"></div>
+      </form>
+    </div>
+
+    <!-- Aqui o app.js insere as fotos salvas, via mostrarFotos() -->
+    <div id="galeriaFotos" class="galeria">
+      <p class="vazio">Carregando...</p>
+    </div>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
